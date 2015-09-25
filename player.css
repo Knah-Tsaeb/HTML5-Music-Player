@@ -17,7 +17,7 @@ body > div {
   border: 1px solid white;
   border-radius: 5px;
   display: inline-block;
-  box-sizing : border-box;
+  box-sizing: border-box;
 }
 #player {
   align-content: stretch;
@@ -126,12 +126,37 @@ body > div {
   color: white;
 }
 
+@media (max-width: 980px) {
+  #player {
+    width: 70%;
+  }
+  #playlist {
+    width: 70%;
+  }
+}
 
 @media (max-width: 768px) {
-#player {
-  width : 96%;
+  #player {
+    width: 96%;
+  }
+  #playlist {
+    width: 96%;
+  }
 }
-#playlist {
-  width : 96%;
-}
+
+@media (max-width: 360px) {
+  #player {
+    width: 100%;
+  }
+  #player #cover {
+    margin: 0 auto 5px;
+  }
+  #player #infos {
+    align-self: auto;
+    flex: 1 1 100%;
+    order: 0;
+  }
+  #playlist {
+    width: 100%;
+  }
 }

@@ -121,7 +121,6 @@ function populateList(arr, e, dir) {
           audio.load();
           audio.play();
           track = parseInt(this.id);
-          console.log(this);
           if (mime == 'audio/mpeg' || mime == 'audio/aac') {
             ID3.loadTags(file, function() {
               var tags = ID3.getAllTags(file);

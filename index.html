@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
-		<title>Music Player</title>
-		<link href="/icons/sound2.png" type="image/png" rel="shortcut icon">
-		<link href="player.css" type="text/css" rel="stylesheet"/>
-		<script src="playlist.php" type="application/javascript"></script>
-		<script src="player.js" type="application/javascript"></script>
-	</head>
-	<body onload="init();">
-		<div id="player">
-		  <img id="cover"/>
-			<div id="infos">
-				<h4 id="title"></h4>
-				<div id="controls">
-				<input id="back" type="button" value="|&#x25c0;&#x25c0;"/>
-				<input id="next" type="button" value="&#9654;&#9654;|"/><br />
-				<label for="">Shuffle:</label> <input id="shuffle" type="checkbox"/>
-				<label for="">Repeat: </label><input id="repeat" type="checkbox"/>
-				</div>
-				<p id="error"></p>
-			</div>
-			<audio id="audio" controls>This is your browser speaking, I don't support HTML5 cause I am too old to learn new tricks.</audio>
-		</div><br/>
-		<div id="playlist"></div>
-	</body>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+    <title>Music Player</title>
+    <link href="/icons/sound2.png" type="image/png" rel="shortcut icon">
+    <link href="player.css" type="text/css" rel="stylesheet"/>
+    <script src="playlist.php" type="application/javascript"></script>
+    <script src="player.js" type="application/javascript"></script>
+    <script src="id3-minimiezd.js"></script>
+  </head>
+  <body onload="init();">
+    <div id="player">
+      <img id="cover"/>
+      <div id="infos">
+        <h4 id="title"></h4>
+        <p>
+          <span id="artist"></span>
+        </p>
+        <p>
+          <span id="album"></span>
+        </p>
+        <div id="controls">
+          <input id="back" type="button" value="|&#x25c0;&#x25c0;"/>
+          <input id="next" type="button" value="&#9654;&#9654;|"/>
+          <br />
+          <label for="">Shuffle:</label>
+          <input id="shuffle" type="checkbox"/>
+          <label for="">Repeat: </label>
+          <input id="repeat" type="checkbox"/>
+        </div>
+        <p id="error"></p>
+      </div>
+      <audio id="audio" controls>
+        This is your browser speaking, I don't support HTML5 cause I am too old to learn new tricks.
+      </audio>
+    </div>
+    <br/>
+    <div id="playlist"></div>
+  </body>
 </html>

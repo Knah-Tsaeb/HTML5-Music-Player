@@ -12,6 +12,7 @@ body {
   font-style: normal;
   text-align: center;
 }
+
 body > div {
   border: 1px solid white;
   border-radius: 5px;
@@ -44,7 +45,7 @@ body > div {
 }
 #player #infos {
   align-self: auto;
-  flex: 1 1 auto;
+  flex: 1 1 0;
   order: 0;
 }
 #player #title {

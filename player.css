@@ -43,10 +43,13 @@ body > div {
   order: 0;
   width: 140px;
 }
-#player #infos {
+#infos {
   align-self: auto;
   flex: 1 1 0;
   order: 0;
+}
+#infos p {
+  margin: .3em 0;
 }
 #player #title {
   margin: 0;
@@ -55,8 +58,8 @@ body > div {
   word-wrap: break-word;
 }
 #player #back, #player #next {
+  margin: 0 .2em;
   display: inline;
-  margin: 9px 5px 0 0;
   font-family: Arial;
   height: 25px;
   width: 47px;
@@ -100,7 +103,7 @@ body > div {
   padding-left: 0;
 }
 #playlist > ul ul {
-  /*	transition:height 1s linear;*/
+  /*transition:height 1s linear;*/
   overflow: hidden;
   height: 0;
 }
@@ -124,6 +127,10 @@ body > div {
 #playlist li:not(.playing) {
   font-style: normal;
   color: white;
+}
+#playlist li:hover {
+  color: lime;
+  transition: color 150ms ease-in-out;
 }
 
 @media (max-width: 980px) {

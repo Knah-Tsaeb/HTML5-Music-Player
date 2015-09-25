@@ -31,6 +31,8 @@ function extToMime(ext) {
   switch(ext) {
     case "mp3":
       return "audio/mpeg";
+    case "mp2":
+      return "audio/mpeg";
     case "ogg":
       return "audio/ogg";
     case "aac":
@@ -126,8 +128,12 @@ function populateList(arr, e, dir) {
               var tags = ID3.getAllTags(file);
               document.getElementById("artist").textContent = "Artist : " + tags.artist || "";
               document.getElementById("album").textContent = "Album : " + tags.album || "";
-              title.textContent = tags.title || title.textContent;
+              window.document.title = title.textContent = tags.title || title.textContent;
             });
+          } else {
+              document.getElementById("artist").textContent = "";
+              document.getElementById("album").textContent = "";
+              window.document.title = title.textContent;
           }
           last = music[track];
           while (last.id != 'playlist') {

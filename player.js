@@ -121,11 +121,13 @@ function populateList(arr, e, dir) {
           audio.load();
           audio.play();
           track = parseInt(this.id);
+          console.log(this);
           if (mime == 'audio/mpeg' || mime == 'audio/aac') {
             ID3.loadTags(file, function() {
               var tags = ID3.getAllTags(file);
               document.getElementById("artist").textContent = "Artist : " + tags.artist || "";
               document.getElementById("album").textContent = "Album : " + tags.album || "";
+              title.textContent = tags.title || title.textContent;
             });
           }
           last = music[track];
